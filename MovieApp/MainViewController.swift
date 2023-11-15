@@ -5,7 +5,7 @@
 //  Created by Linconl Rufino on 18/10/23.
 //
 
-import UIKit
+import SwiftUI
 
 class MainViewController: UITabBarController {
     
@@ -20,11 +20,11 @@ class MainViewController: UITabBarController {
         tabBar.tintColor = UIColor.tabBarItemColor
         tabBar.backgroundColor = .white
         
-        let flagVC = createTabBarItem("Home", "house",ViewController())
-        let starWarsVC = createTabBarItem("Search", "magnifyingglass.circle",ViewController())
-        let gridVC = createTabBarItem("Profile", "person.crop.circle",ViewController())
+        let homeVC = createTabBarItem("Home", "house", HomeViewController())
+        let starWarsVC = createTabBarItem("Search", "magnifyingglass.circle", ViewController())
+        let gridVC = createTabBarItem("Profile", "person.crop.circle", ViewController())
         
-        setViewControllers([flagVC, starWarsVC, gridVC], animated: false)
+        setViewControllers([homeVC, starWarsVC, gridVC], animated: false)
     }
     
     private func createTabBarItem(_ title: String,_ image: String, _ viewController: UIViewController) -> UINavigationController {
@@ -39,5 +39,23 @@ class MainViewController: UITabBarController {
         
         return navigation
     }
+}
+
+// MARK: - Preview
+struct ViewControllerRepresentable: UIViewControllerRepresentable {
     
+    typealias UIViewControllerType = MainViewController
+    
+    func makeUIViewController(context: Context) -> MainViewController {
+        MainViewController()
+    }
+    
+    func updateUIViewController(_ uiViewController: MainViewController, context: Context) {
+    }
+}
+
+struct ViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerRepresentable()
+    }
 }
