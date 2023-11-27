@@ -47,6 +47,7 @@ public class HomeView: UIView {
                 section.orthogonalScrollingBehavior = .continuous
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
                 let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+                header.contentInsets.trailing = 16
                 section.boundarySupplementaryItems = [header]
                 return section
                 
@@ -83,7 +84,7 @@ public class HomeView: UIView {
         addSubview(collectionView)
         buildViewConstraints()
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.register( SeeMoreView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SeeMoreView.identifier)
+        collectionView.register( SeeMoreHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SeeMoreHeaderView.identifier)
     }
     
     public func buildViewConstraints() {
@@ -111,15 +112,32 @@ extension HomeView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         cell.backgroundColor = .blue
-    
         return cell
     }
     
-    public func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SeeMoreView.identifier, for: indexPath)
-
-            return header
+    public func collectionView(
+        _ collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        
+        let headerView = collectionView.dequeueReusableSupplementaryView(
+            ofKind: kind,
+            withReuseIdentifier: SeeMoreHeaderView.identifier,
+            for: indexPath)
+        
+        guard let typedHeaderView = headerView as? SeeMoreHeaderView
+        else { return headerView }
+        
+        switch sections[indexPath.section] {
+        case .nowShowing:
+            typedHeaderView.configure(title: "Now Showing")
+        case .popular:
+            typedHeaderView.configure(title: "Popular")
         }
+        
+        return typedHeaderView
+    }
 }
 
 // MARK: - Delegate
@@ -148,3 +166,4 @@ struct ContentView_Previews: PreviewProvider {
         typealias UIViewControllerType = UIViewController
     }
 }
+
