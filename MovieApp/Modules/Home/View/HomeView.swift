@@ -25,6 +25,7 @@ public class HomeView: UIView {
     
     private lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: createCompositionalLayout())
+        collection.backgroundColor = .white 
         collection.dataSource = self
         collection.delegate = self
         collection.translatesAutoresizingMaskIntoConstraints = false

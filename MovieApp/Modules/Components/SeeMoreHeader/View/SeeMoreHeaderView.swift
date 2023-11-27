@@ -15,6 +15,7 @@ class SeeMoreHeaderView: UICollectionReusableView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Title - See More"
+        label.textColor = .black
         label.font = .systemFont(ofSize: 22, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
