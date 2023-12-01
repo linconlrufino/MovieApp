@@ -39,29 +39,58 @@ public class HomeView: UIView {
             (sectionIndex, env) -> NSCollectionLayoutSection? in
             switch self.sections[sectionIndex] {
             case .nowShowing:
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(0.5), heightDimension: .absolute(320)))
-                item.contentInsets.trailing = 16
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.85), heightDimension: .estimated(500)), subitems: [item])
+                let size = NSCollectionLayoutSize(
+                    widthDimension: .absolute(175),
+                    heightDimension: .absolute(320)
+                )
+                let item = NSCollectionLayoutItem(layoutSize: size)
+                let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
+                let headerSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .absolute(50)
+                )
+                let header = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: headerSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .topLeading
+                )
                 let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets.leading = 16
-                section.contentInsets.bottom = 36
                 section.orthogonalScrollingBehavior = .continuous
-                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
-                let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
-                header.contentInsets.trailing = 16
                 section.boundarySupplementaryItems = [header]
+                section.interGroupSpacing = 16
+                section.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 16,
+                    bottom: 16,
+                    trailing: 16
+                )
+
                 return section
                 
             case .popular:
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.55)))
-                item.contentInsets.bottom = 12
-                let group = NSCollectionLayoutGroup.vertical(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(350)), subitems: [item])
+                let size = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .absolute(200))
+                let item = NSCollectionLayoutItem(layoutSize: size)
+                let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
+                let headerSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(1),
+                    heightDimension: .absolute(50)
+                )
+                let header = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: headerSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .topLeading
+                )
                 let section = NSCollectionLayoutSection(group: group)
-                section.contentInsets.leading = 16
-                section.contentInsets.trailing = 16
-                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
-                let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .topLeading)
                 section.boundarySupplementaryItems = [header]
+                section.interGroupSpacing = 16
+                section.contentInsets = NSDirectionalEdgeInsets(
+                    top: 0,
+                    leading: 16,
+                    bottom: 0,
+                    trailing: 16
+                )
                 return section
             }
         }
@@ -88,11 +117,11 @@ public class HomeView: UIView {
         collectionView.register( SeeMoreHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SeeMoreHeaderView.identifier)
     }
     
-    public func buildViewConstraints() {
+    private func buildViewConstraints() {
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.leftAnchor.constraint(equalTo: leftAnchor),
-            collectionView.rightAnchor.constraint(equalTo: rightAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }

@@ -125,33 +125,17 @@
 		7DC639432B143B4500A26B46 /* SeeMoreHeader */ = {
 			isa = PBXGroup;
 			children = (
-				7DC639442B143B5E00A26B46 /* View */,
-			);
-			path = SeeMoreHeader;
-			sourceTree = "<group>";
-		};
-		7DC639442B143B5E00A26B46 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				7DC639452B143B8300A26B46 /* SeeMoreHeaderView.swift */,
 			);
-			path = View;
+			path = SeeMoreHeader;
 			sourceTree = "<group>";
 		};
 		7DC639472B14DF8C00A26B46 /* SeeMoreButton */ = {
 			isa = PBXGroup;
 			children = (
-				7DC639482B14DF9900A26B46 /* View */,
-			);
-			path = SeeMoreButton;
-			sourceTree = "<group>";
-		};
-		7DC639482B14DF9900A26B46 /* View */ = {
-			isa = PBXGroup;
-			children = (
 				7DC639492B14DFCF00A26B46 /* SeeMoreButton.swift */,
 			);
-			path = View;
+			path = SeeMoreButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

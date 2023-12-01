@@ -9,31 +9,36 @@ import SwiftUI
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Layout Properties
+
     private lazy var homeView: HomeView = {
         let homeView = HomeView()
         homeView.translatesAutoresizingMaskIntoConstraints = false
         return homeView
     }()
     
-    public func buildViewConstraints() {
-        NSLayoutConstraint.activate([
-            homeView.topAnchor.constraint(equalTo: view.topAnchor),
-            homeView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            homeView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            homeView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        addView()
+        buildViewConstraints()
     }
- 
-    override func loadView() {
-        view = UIView()
+    
+    // MARK: - View Codable
+    
+    private func addView() {
         view.addSubview(homeView)
     }
     
-    override func viewDidLoad() {        
-        buildViewConstraints()
+    private func buildViewConstraints() {
+        NSLayoutConstraint.activate([
+            homeView.topAnchor.constraint(equalTo: view.topAnchor),
+            homeView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            homeView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            homeView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
 }
-
 
 // MARK: - Preview
 struct CollectionViewController_Previews: PreviewProvider {

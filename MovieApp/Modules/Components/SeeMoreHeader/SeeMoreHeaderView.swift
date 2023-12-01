@@ -45,26 +45,23 @@ class SeeMoreHeaderView: UICollectionReusableView {
         buildViewConstraints()
     }
     
-    public func buildViewConstraints() {
+    private func buildViewConstraints() {
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: topAnchor),
-            label.leftAnchor.constraint(equalTo: leftAnchor),
-            label.rightAnchor.constraint(equalTo: seeMoreButton.leftAnchor),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor),
             label.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             seeMoreButton.centerYAnchor.constraint(equalTo: centerYAnchor),
-            seeMoreButton.leftAnchor.constraint(equalTo: label.rightAnchor),
-            seeMoreButton.rightAnchor.constraint(equalTo: rightAnchor),
+            seeMoreButton.trailingAnchor.constraint(equalTo: trailingAnchor),
             seeMoreButton.heightAnchor.constraint(equalToConstant: 25),
             seeMoreButton.widthAnchor.constraint(equalToConstant: 90)
         ])
     }
     
-    func configure(title: String) {
+    public func configure(title: String) {
       label.text = title
     }
 }
-
 
 // MARK: - Preview
 struct ContentViews_Previews: PreviewProvider {
