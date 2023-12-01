@@ -14,6 +14,10 @@
 		7D16D9FD2AD0F289005C0112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D16D9FB2AD0F289005C0112 /* LaunchScreen.storyboard */; };
 		7D8692C02AE0BBF9001AFCE4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8692BF2AE0BBF9001AFCE4 /* MainViewController.swift */; };
 		7D8692C72AE8A50F001AFCE4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8692C62AE8A50F001AFCE4 /* UIColor+.swift */; };
+		7DC032692B03097300D466DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC032682B03097300D466DE /* HomeViewController.swift */; };
+		7DC0326F2B0AE5E200D466DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0326E2B0AE5E200D466DE /* HomeView.swift */; };
+		7DC639462B143B8300A26B46 /* SeeMoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC639452B143B8300A26B46 /* SeeMoreHeaderView.swift */; };
+		7DC6394A2B14DFCF00A26B46 /* SeeMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC639492B14DFCF00A26B46 /* SeeMoreButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		7D16D9FE2AD0F289005C0112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D8692BF2AE0BBF9001AFCE4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7D8692C62AE8A50F001AFCE4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		7DC032682B03097300D466DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7DC0326E2B0AE5E200D466DE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7DC639452B143B8300A26B46 /* SeeMoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreHeaderView.swift; sourceTree = "<group>"; };
+		7DC639492B14DFCF00A26B46 /* SeeMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		7D8692C32AE1B844001AFCE4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7DC0326D2B0AE57800D466DE /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -90,6 +99,8 @@
 		7D8692C42AE1C022001AFCE4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7DC639472B14DF8C00A26B46 /* SeeMoreButton */,
+				7DC639432B143B4500A26B46 /* SeeMoreHeader */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -100,6 +111,31 @@
 				7D8692C62AE8A50F001AFCE4 /* UIColor+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7DC0326D2B0AE57800D466DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DC032682B03097300D466DE /* HomeViewController.swift */,
+				7DC0326E2B0AE5E200D466DE /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7DC639432B143B4500A26B46 /* SeeMoreHeader */ = {
+			isa = PBXGroup;
+			children = (
+				7DC639452B143B8300A26B46 /* SeeMoreHeaderView.swift */,
+			);
+			path = SeeMoreHeader;
+			sourceTree = "<group>";
+		};
+		7DC639472B14DF8C00A26B46 /* SeeMoreButton */ = {
+			isa = PBXGroup;
+			children = (
+				7DC639492B14DFCF00A26B46 /* SeeMoreButton.swift */,
+			);
+			path = SeeMoreButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +166,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					7D16D9EC2AD0F288005C0112 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -172,11 +208,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DC6394A2B14DFCF00A26B46 /* SeeMoreButton.swift in Sources */,
 				7D16D9F52AD0F288005C0112 /* ViewController.swift in Sources */,
+				7DC0326F2B0AE5E200D466DE /* HomeView.swift in Sources */,
 				7D16D9F12AD0F288005C0112 /* AppDelegate.swift in Sources */,
 				7D16D9F32AD0F288005C0112 /* SceneDelegate.swift in Sources */,
 				7D8692C02AE0BBF9001AFCE4 /* MainViewController.swift in Sources */,
 				7D8692C72AE8A50F001AFCE4 /* UIColor+.swift in Sources */,
+				7DC032692B03097300D466DE /* HomeViewController.swift in Sources */,
+				7DC639462B143B8300A26B46 /* SeeMoreHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +270,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -290,6 +331,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
