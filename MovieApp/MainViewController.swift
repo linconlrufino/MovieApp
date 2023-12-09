@@ -21,10 +21,10 @@ class MainViewController: UITabBarController {
         tabBar.backgroundColor = .white
         
         let homeVC = createTabBarItem("Home", "house", HomeViewController())
-        let starWarsVC = createTabBarItem("Search", "magnifyingglass.circle", ViewController())
-        let gridVC = createTabBarItem("Profile", "person.crop.circle", ViewController())
+        let searchVC = createTabBarItem("Search", "magnifyingglass.circle", ViewController())
+        let profileVC = createTabBarItem("Profile", "person.crop.circle", ViewController())
         
-        setViewControllers([homeVC, starWarsVC, gridVC], animated: false)
+        setViewControllers([homeVC, searchVC, profileVC], animated: false)
     }
     
     private func createTabBarItem(_ title: String,_ image: String, _ viewController: UIViewController) -> UINavigationController {

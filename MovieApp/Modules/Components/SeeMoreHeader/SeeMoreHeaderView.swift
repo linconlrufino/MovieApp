@@ -12,11 +12,13 @@ class SeeMoreHeaderView: UICollectionReusableView {
 
     static let identifier = "seeMoreId"
     
+    // MARK: - Layout Properties
+
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Title - See More"
         label.textColor = .black
-        label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.font = .systemFont(ofSize: 16, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -28,6 +30,8 @@ class SeeMoreHeaderView: UICollectionReusableView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+
+    // MARK: - Initializer
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -37,6 +41,8 @@ class SeeMoreHeaderView: UICollectionReusableView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+
+    // MARK: - View Codable
 
     private func layout() {
       [label, seeMoreButton].forEach {
