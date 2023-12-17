@@ -11,10 +11,12 @@ struct Card {
     var title : String
     var url : URL
     var rating : Double
+    var genre: [String]
 
-    init( title: String, url: URL, rating: Double) {
+    init( title: String, url: URL, rating: Double, genre: [String]) {
         self.title = title
         self.url = url
         self.rating = rating
+        self.genre = genre
     }
 }

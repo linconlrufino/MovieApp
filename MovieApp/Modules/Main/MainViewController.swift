@@ -21,8 +21,8 @@ class MainViewController: UITabBarController {
         tabBar.backgroundColor = .white
         
         let homeVC = createTabBarItem("Home", "house", HomeViewController())
-        let searchVC = createTabBarItem("Search", "magnifyingglass.circle", ViewController())
-        let profileVC = createTabBarItem("Profile", "person.crop.circle", ViewController())
+        let searchVC = createTabBarItem("Search", "magnifyingglass.circle", UIViewController())
+        let profileVC = createTabBarItem("Profile", "person.crop.circle", UIViewController())
         
         setViewControllers([homeVC, searchVC, profileVC], animated: false)
     }
