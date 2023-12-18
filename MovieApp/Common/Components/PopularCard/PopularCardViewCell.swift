@@ -114,6 +114,7 @@ class PopularCardViewCell: UICollectionViewCell {
     
     public func configure(title: String, url: URL, ratingValue: Double,genresCard: [String] ) {
         titleCard.text = title
+        rating.configure(rating: ratingValue)
         genres = genresCard
         let processor = DownsamplingImageProcessor(size: CGSizeMake(80, 150)) |> RoundCornerImageProcessor(cornerRadius: 10)
         
