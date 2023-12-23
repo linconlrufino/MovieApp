@@ -98,8 +98,8 @@ public class HomeView: UIView {
             switch self.sections[sectionIndex] {
             case .nowShowing:
                 let size = NSCollectionLayoutSize(
-                    widthDimension: .absolute(175),
-                    heightDimension: .absolute(310)
+                    widthDimension: .absolute(143),
+                    heightDimension: .absolute(265)
                 )
                 let item = NSCollectionLayoutItem(layoutSize: size)
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
@@ -110,7 +110,6 @@ public class HomeView: UIView {
                 let header = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: headerSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
-                    
                     alignment: .topLeading
                 )
                 let section = NSCollectionLayoutSection(group: group)
@@ -129,7 +128,7 @@ public class HomeView: UIView {
             case .popular:
                 let size = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .absolute(150))
+                    heightDimension: .absolute(120))
                 let item = NSCollectionLayoutItem(layoutSize: size)
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
                 let headerSize = NSCollectionLayoutSize(

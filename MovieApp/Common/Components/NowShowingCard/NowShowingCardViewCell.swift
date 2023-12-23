@@ -28,6 +28,9 @@ class NowShowingCardViewCell: UICollectionViewCell {
     private lazy var image: UIImageView = {
         image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.clipsToBounds = true
+        image.layer.cornerRadius = 10
         return image
     }()
     
@@ -62,22 +65,22 @@ class NowShowingCardViewCell: UICollectionViewCell {
     private func buildViewConstraints() {
         NSLayoutConstraint.activate([
             image.topAnchor.constraint(equalTo: topAnchor),
+            image.leadingAnchor.constraint(equalTo: leadingAnchor),
+            image.trailingAnchor.constraint(equalTo: trailingAnchor),
+            image.heightAnchor.constraint(equalToConstant: 212),
 
             titleCard.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 10),
             titleCard.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleCard.trailingAnchor.constraint(equalTo: trailingAnchor),
             
+            rating.topAnchor.constraint(equalTo: titleCard.bottomAnchor, constant: 12),
             rating.leadingAnchor.constraint(equalTo: leadingAnchor),
-            rating.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
     public func configure(title: String, url: URL, ratingValue: Double) {
         titleCard.text = title
-        let processor = DownsamplingImageProcessor(size: CGSizeMake(195, 250)) |> RoundCornerImageProcessor(cornerRadius: 10)
-
-        image.kf.setImage(with:url, options: [.processor(processor)])
-        
+        image.kf.setImage(with:url)
         rating.configure(rating: ratingValue)
     }
 }

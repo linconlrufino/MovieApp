@@ -29,6 +29,9 @@ class PopularCardViewCell: UICollectionViewCell {
     private lazy var image: UIImageView = {
         image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = 10
         return image
     }()
     
@@ -97,6 +100,7 @@ class PopularCardViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             image.topAnchor.constraint(equalTo: topAnchor),
             image.bottomAnchor.constraint(equalTo: bottomAnchor),
+            image.widthAnchor.constraint(equalToConstant: 85),
             
             titleCard.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 20),
             titleCard.topAnchor.constraint(equalTo: topAnchor),
@@ -116,9 +120,7 @@ class PopularCardViewCell: UICollectionViewCell {
         titleCard.text = title
         rating.configure(rating: ratingValue)
         genres = genresCard
-        let processor = DownsamplingImageProcessor(size: CGSizeMake(80, 150)) |> RoundCornerImageProcessor(cornerRadius: 10)
-        
-        image.kf.setImage(with:url, options: [.processor(processor)])
+        image.kf.setImage(with:url)
     }
 }
 
