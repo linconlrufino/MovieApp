@@ -20,7 +20,7 @@ class NowShowingCardViewCell: UICollectionViewCell {
         titleCard.text = "Title"
         titleCard.textColor = .black
         titleCard.numberOfLines = 0
-        titleCard.font = .systemFont(ofSize: 14, weight: .bold)
+        titleCard.font = UIFont(name: "Mulish-Bold", size: 14)
         titleCard.translatesAutoresizingMaskIntoConstraints = false
         return titleCard
     }()
@@ -81,6 +81,6 @@ class NowShowingCardViewCell: UICollectionViewCell {
     public func configure(title: String, url: URL, ratingValue: Double) {
         titleCard.text = title
         image.kf.setImage(with:url)
-        rating.configure(rating: ratingValue)
+        rating.configure(ratingValue)
     }
 }

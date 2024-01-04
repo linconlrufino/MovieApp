@@ -20,7 +20,7 @@ class MainViewController: UITabBarController {
         tabBar.tintColor = UIColor.tabBarItemColor
         tabBar.backgroundColor = .white
         
-        let homeVC = createTabBarItem("Home", "house", HomeViewController())
+        let homeVC = createTabBarItem("FilmKu", "house", HomeViewController())
         let searchVC = createTabBarItem("Search", "magnifyingglass.circle", UIViewController())
         let profileVC = createTabBarItem("Profile", "person.crop.circle", UIViewController())
         
@@ -31,7 +31,6 @@ class MainViewController: UITabBarController {
         
         let navigation = UINavigationController(rootViewController: viewController)
         
-        navigation.tabBarItem.title = title
         navigation.tabBarItem.image = UIImage(systemName: image)
         navigation.tabBarItem.selectedImage = UIImage(systemName: image + ".fill")
 

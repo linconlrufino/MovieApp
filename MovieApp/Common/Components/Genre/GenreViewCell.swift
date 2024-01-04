@@ -19,7 +19,7 @@ class GenreViewCell: UICollectionViewCell {
         genreLabel.text = "Genre"
         genreLabel.textColor = UIColor.GenreTextColor
         genreLabel.textAlignment = .center
-        genreLabel.font = .systemFont(ofSize: 8)
+        genreLabel.font = UIFont(name: "Mulish-Bold", size: 8)
         genreLabel.backgroundColor = UIColor.GenreBackgroundColor
         genreLabel.layer.masksToBounds = true
         genreLabel.layer.cornerRadius = 10

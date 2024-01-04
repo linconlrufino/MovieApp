@@ -17,15 +17,16 @@ class SeeMoreHeaderView: UICollectionReusableView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Title - See More"
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.textColor = .CardsTitleColor
+        label.font = UIFont(name: "Merriweather-Black", size: 16)
+
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var seeMoreButton: SeeMoreButton = {
         let button = SeeMoreButton()
-        button.setTitle("See More", for: .normal)
+        button.setTitle("See more", for: .normal)
         button.setTitleColor(.SeeMoreButtonColor, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -59,8 +60,8 @@ class SeeMoreHeaderView: UICollectionReusableView {
             
             seeMoreButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             seeMoreButton.trailingAnchor.constraint(equalTo: trailingAnchor),
-            seeMoreButton.heightAnchor.constraint(equalToConstant: 25),
-            seeMoreButton.widthAnchor.constraint(equalToConstant: 90)
+            seeMoreButton.heightAnchor.constraint(equalToConstant: 21),
+            seeMoreButton.widthAnchor.constraint(equalToConstant: 61)
         ])
     }
     

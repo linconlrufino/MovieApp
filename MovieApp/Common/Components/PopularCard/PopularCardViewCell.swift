@@ -21,7 +21,7 @@ class PopularCardViewCell: UICollectionViewCell {
         titleCard.text = "Title"
         titleCard.textColor = .black
         titleCard.numberOfLines = 0
-        titleCard.font = .systemFont(ofSize: 14, weight: .bold)
+        titleCard.font = UIFont(name: "Mulish-Bold", size: 14)
         titleCard.translatesAutoresizingMaskIntoConstraints = false
         return titleCard
     }()
@@ -48,6 +48,12 @@ class PopularCardViewCell: UICollectionViewCell {
         genresList.delegate = self
         genresList.translatesAutoresizingMaskIntoConstraints = false
         return genresList
+    }()
+    
+    private lazy var duration: DurationView = {
+        duration = DurationView()
+        duration.translatesAutoresizingMaskIntoConstraints = false
+        return duration
     }()
     
     private func createCompositionalLayout () -> UICollectionViewCompositionalLayout {
@@ -90,6 +96,7 @@ class PopularCardViewCell: UICollectionViewCell {
         addSubview(image)
         addSubview(rating)
         addSubview(genresList)
+        addSubview(duration)
         
         genresList.register(GenreViewCell.self, forCellWithReuseIdentifier: GenreViewCell.identifier)
         
@@ -113,14 +120,18 @@ class PopularCardViewCell: UICollectionViewCell {
             genresList.leadingAnchor.constraint(equalTo: image.trailingAnchor),
             genresList.widthAnchor.constraint(equalToConstant: 300),
             genresList.heightAnchor.constraint(equalToConstant: 18),
+            
+            duration.topAnchor.constraint(equalTo: genresList.bottomAnchor, constant: 16),
+            duration.leadingAnchor.constraint(equalTo: image.trailingAnchor, constant: 20)
         ])
     }
     
-    public func configure(title: String, url: URL, ratingValue: Double,genresCard: [String] ) {
+    public func configure(title: String, url: URL, ratingValue: Double,genresCard: [String], durationValue: String) {
         titleCard.text = title
-        rating.configure(rating: ratingValue)
+        rating.configure(ratingValue)
         genres = genresCard
         image.kf.setImage(with:url)
+        duration.configure(durationValue)
     }
 }
 
