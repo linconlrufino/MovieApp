@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		6A21ED549F8D79092B2E54F9 /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B25DD48E124620A71F2410A /* Pods_MovieApp.framework */; };
+		7D04669C2B2E6806009EA9C2 /* GenreViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D04669B2B2E6806009EA9C2 /* GenreViewCell.swift */; };
 		7D16D9F12AD0F288005C0112 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16D9F02AD0F288005C0112 /* AppDelegate.swift */; };
 		7D16D9F32AD0F288005C0112 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16D9F22AD0F288005C0112 /* SceneDelegate.swift */; };
-		7D16D9F52AD0F288005C0112 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D16D9F42AD0F288005C0112 /* ViewController.swift */; };
 		7D16D9FA2AD0F289005C0112 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D16D9F92AD0F289005C0112 /* Assets.xcassets */; };
 		7D16D9FD2AD0F289005C0112 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D16D9FB2AD0F289005C0112 /* LaunchScreen.storyboard */; };
 		7D27F9302B1CE64D00F489CE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D27F92F2B1CE64D00F489CE /* Card.swift */; };
+		7D4C7F712B37D4EB004F722C /* DurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4C7F702B37D4EB004F722C /* DurationView.swift */; };
 		7D8692C02AE0BBF9001AFCE4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8692BF2AE0BBF9001AFCE4 /* MainViewController.swift */; };
 		7D8692C72AE8A50F001AFCE4 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8692C62AE8A50F001AFCE4 /* UIColor+.swift */; };
 		7DC032692B03097300D466DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC032682B03097300D466DE /* HomeViewController.swift */; };
 		7DC0326F2B0AE5E200D466DE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0326E2B0AE5E200D466DE /* HomeView.swift */; };
+		7DC06F382B3BA47800DABC4D /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DC06F372B3BA47800DABC4D /* Merriweather-Black.ttf */; };
+		7DC06F3A2B3BA73E00DABC4D /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DC06F392B3BA73D00DABC4D /* Mulish-Regular.ttf */; };
+		7DC06F3C2B3BAEAB00DABC4D /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DC06F3B2B3BAEAB00DABC4D /* Mulish-Bold.ttf */; };
 		7DC639462B143B8300A26B46 /* SeeMoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC639452B143B8300A26B46 /* SeeMoreHeaderView.swift */; };
 		7DC6394A2B14DFCF00A26B46 /* SeeMoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC639492B14DFCF00A26B46 /* SeeMoreButton.swift */; };
 		7DCA20742B1C205200418A97 /* PopularCardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCA20732B1C205200418A97 /* PopularCardViewCell.swift */; };
@@ -27,18 +31,22 @@
 
 /* Begin PBXFileReference section */
 		452EB825E9A4947E3CE7DD1B /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7D04669B2B2E6806009EA9C2 /* GenreViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewCell.swift; sourceTree = "<group>"; };
 		7D16D9ED2AD0F288005C0112 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D16D9F02AD0F288005C0112 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D16D9F22AD0F288005C0112 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7D16D9F42AD0F288005C0112 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D16D9F92AD0F289005C0112 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D16D9FC2AD0F289005C0112 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D16D9FE2AD0F289005C0112 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D27F92F2B1CE64D00F489CE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		7D4C7F702B37D4EB004F722C /* DurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationView.swift; sourceTree = "<group>"; };
 		7D8692BF2AE0BBF9001AFCE4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7D8692C62AE8A50F001AFCE4 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		7DC032682B03097300D466DE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7DC0326E2B0AE5E200D466DE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		7DC06F372B3BA47800DABC4D /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		7DC06F392B3BA73D00DABC4D /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		7DC06F3B2B3BAEAB00DABC4D /* Mulish-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Bold.ttf"; sourceTree = "<group>"; };
 		7DC639452B143B8300A26B46 /* SeeMoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreHeaderView.swift; sourceTree = "<group>"; };
 		7DC639492B14DFCF00A26B46 /* SeeMoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMoreButton.swift; sourceTree = "<group>"; };
 		7DCA20732B1C205200418A97 /* PopularCardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCardViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +76,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7D0466972B2E635A009EA9C2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7D8692C42AE1C022001AFCE4 /* Components */,
+				7D8692C52AE8A4F7001AFCE4 /* Extensions */,
+				7D0466992B2E6422009EA9C2 /* Resources */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7D0466982B2E63AE009EA9C2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7D8692BF2AE0BBF9001AFCE4 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7D0466992B2E6422009EA9C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D16D9F92AD0F289005C0112 /* Assets.xcassets */,
+				7DC06F362B3BA28400DABC4D /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D04669A2B2E6771009EA9C2 /* Genre */ = {
+			isa = PBXGroup;
+			children = (
+				7D04669B2B2E6806009EA9C2 /* GenreViewCell.swift */,
+			);
+			path = Genre;
+			sourceTree = "<group>";
+		};
 		7D16D9E42AD0F288005C0112 = {
 			isa = PBXGroup;
 			children = (
@@ -89,15 +132,12 @@
 		7D16D9EF2AD0F288005C0112 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				7D8692C52AE8A4F7001AFCE4 /* Extensions */,
-				7D8692C22AE1B82F001AFCE4 /* Modules */,
+				7D16D9FE2AD0F289005C0112 /* Info.plist */,
 				7D16D9F02AD0F288005C0112 /* AppDelegate.swift */,
 				7D16D9F22AD0F288005C0112 /* SceneDelegate.swift */,
-				7D16D9F42AD0F288005C0112 /* ViewController.swift */,
-				7D16D9F92AD0F289005C0112 /* Assets.xcassets */,
 				7D16D9FB2AD0F289005C0112 /* LaunchScreen.storyboard */,
-				7D16D9FE2AD0F289005C0112 /* Info.plist */,
-				7D8692BF2AE0BBF9001AFCE4 /* MainViewController.swift */,
+				7D0466972B2E635A009EA9C2 /* Common */,
+				7D8692C22AE1B82F001AFCE4 /* Modules */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -110,10 +150,18 @@
 			path = Card;
 			sourceTree = "<group>";
 		};
+		7D4C7F6F2B37D2F3004F722C /* Duration */ = {
+			isa = PBXGroup;
+			children = (
+				7D4C7F702B37D4EB004F722C /* DurationView.swift */,
+			);
+			path = Duration;
+			sourceTree = "<group>";
+		};
 		7D8692C22AE1B82F001AFCE4 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7D8692C42AE1C022001AFCE4 /* Components */,
+				7D0466982B2E63AE009EA9C2 /* Main */,
 				7D8692C32AE1B844001AFCE4 /* Home */,
 			);
 			path = Modules;
@@ -130,6 +178,8 @@
 		7D8692C42AE1C022001AFCE4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				7D4C7F6F2B37D2F3004F722C /* Duration */,
+				7D04669A2B2E6771009EA9C2 /* Genre */,
 				7DEDF79B2B23EEC000A47536 /* Rating */,
 				7D27F92E2B1CE63500F489CE /* Card */,
 				7DCA20722B1C201E00418A97 /* PopularCard */,
@@ -155,6 +205,16 @@
 				7DC0326E2B0AE5E200D466DE /* HomeView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7DC06F362B3BA28400DABC4D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7DC06F3B2B3BAEAB00DABC4D /* Mulish-Bold.ttf */,
+				7DC06F392B3BA73D00DABC4D /* Mulish-Regular.ttf */,
+				7DC06F372B3BA47800DABC4D /* Merriweather-Black.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		7DC639432B143B4500A26B46 /* SeeMoreHeader */ = {
@@ -268,6 +328,9 @@
 			files = (
 				7D16D9FD2AD0F289005C0112 /* LaunchScreen.storyboard in Resources */,
 				7D16D9FA2AD0F289005C0112 /* Assets.xcassets in Resources */,
+				7DC06F382B3BA47800DABC4D /* Merriweather-Black.ttf in Resources */,
+				7DC06F3C2B3BAEAB00DABC4D /* Mulish-Bold.ttf in Resources */,
+				7DC06F3A2B3BA73E00DABC4D /* Mulish-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +383,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D4C7F712B37D4EB004F722C /* DurationView.swift in Sources */,
 				7DC6394A2B14DFCF00A26B46 /* SeeMoreButton.swift in Sources */,
 				7DCA20762B1C206200418A97 /* NowShowingCardViewCell.swift in Sources */,
-				7D16D9F52AD0F288005C0112 /* ViewController.swift in Sources */,
 				7DC0326F2B0AE5E200D466DE /* HomeView.swift in Sources */,
 				7DEDF79D2B23F1A700A47536 /* RatingView.swift in Sources */,
+				7D04669C2B2E6806009EA9C2 /* GenreViewCell.swift in Sources */,
 				7D16D9F12AD0F288005C0112 /* AppDelegate.swift in Sources */,
 				7DCA20742B1C205200418A97 /* PopularCardViewCell.swift in Sources */,
 				7D16D9F32AD0F288005C0112 /* SceneDelegate.swift in Sources */,
@@ -401,7 +465,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -456,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

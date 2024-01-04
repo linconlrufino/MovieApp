@@ -24,7 +24,7 @@ class RatingView: UIView {
     private lazy var ratingLabel: UILabel = {
         ratingLabel = UILabel()
         ratingLabel.textColor = .RatingTextColor
-        ratingLabel.font = .systemFont(ofSize: 12)
+        ratingLabel.font = UIFont(name: "Mulish-Regular", size: 12)
         ratingLabel.translatesAutoresizingMaskIntoConstraints = false
         ratingLabel.text = "10/10 IMDb"
         return ratingLabel
@@ -61,7 +61,7 @@ class RatingView: UIView {
         ])
     }
     
-    public func configure(rating: Double){
+    public func configure(_ rating: Double){
         ratingLabel.text = "\(rating)/10 IMDb"
     }
 }
