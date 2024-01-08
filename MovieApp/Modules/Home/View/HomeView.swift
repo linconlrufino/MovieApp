@@ -23,50 +23,66 @@ public class HomeView: UIView {
     private let nowShowingMovies = [
         Card(
             title: "Spiderman: No Way Home",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/ba1f/bf81/09fe7e6d95c0a08f44a32090b2ce4427?Expires=1702252800&Signature=OKOnDaegnTa8NDuTNosCeXTAJVfC5SBgULHVr6-emDUgtQOa~pONzhiAOPzqsXkd63Ka2jKKPQSMVJLTCnPsAsZ6mRgHVaPsGhlL01CuqJ803h7VylKbCAY1vQ21mbunmxn0HAfRWT0n3X2~hvsECx3QeJHRxZJvYXOZVWj5D7Tnh3juWbIQQn23SjUSdaK~vmnJ3lAdpGB4obJt4U5upUwQT~v2mKenQjrC8TYef-4PekS6a0GYW3e-uRw~4j4YV9onbEgXhfm9HGdUDQgW84FGnctGLUXbesNMRbtQeAqsADTVpBbst6bmBbScypUl0-lgesJ8MvZ-K2NOs~d~NA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/ba1f/bf81/09fe7e6d95c0a08f44a32090b2ce4427?Expires=1703462400&Signature=DaIgcuc8JkCBvi~iG6PP~~7OJaxrg7NywAB8fFkLXHhsDj8yO4nNCj4A-wiTC46V7U-UWuDVQ2ijbMHMQllQ5j7IXofmP4Z94utbwIFcpuWND6phBSHrnHpdUZKpMlrQPk5nXCeOkjDE0cf0oLPJs-OslsqPA78V-6tbR1QtnAfsV3uZ8ICBXqaoMtgrFY38MR0qc-aP5aVMTv32lrRrUyIILDNF6qvnzwHu7Lfhe1gkrXtzREa4T8N28oAHP-z8axf8LkBIKOgg0XMnIOL4fTVrZU68f7Iaeswkv-80zIDNHWm0xAfFGhFzUtVfLZIQVYeHFSsQC~O2gDhMHgJtVw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 9.1
+            rating: 9.1,
+            genre: ["ACTION", "ADVENTURE", "FANTASY"],
+            duration: "1h 47m"
         ),
         Card(
             title: "Eternals",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/558c/7e30/1333a603c13c99258f8fae503839a571?Expires=1702252800&Signature=HWDjowTJUgX8lUDPgoYsCoFKliVhXkDvXqgQYsNRyID8-W6JsCCPnd9T96VcYYsnLnYj~DbIcsNmKM-Pe04t~tLD71sAkvPMqT9kFXLcreNhBwzAJfDONbVlLcC3Kg~s7S5tFgyMBV-ddvpnrEYAKHHkrml0zF64faW8HmGEzsNgzgLKZCsl~uvPEl8ihT-YNq5kM~iTIvz27KKYxpiW2GSwzfRplBlwGDtWGfm-oU5rsHtgUGVzGN-nnY77fRDvVMe4sPyKCdAkl0dZmzdpHCdE5yyOs8x1g1t~tFeWnNkg2VJwcTFcxaD2DA6IgKSdWAC2aeIwAPkYM7OaWK2BHw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/558c/7e30/1333a603c13c99258f8fae503839a571?Expires=1703462400&Signature=LZgHsrrm~wlMleiu0qgSBJEcA9jb3Fid3ukikWKqMGk4k0kOUUHaSfPSO3SHorU3xwNlt46l3KjLGKBNC8njSi4k92aZ296Wp7mYjuX9wpcaA2J14YM8R3R3FeUTjMRjaF~Q7RUa2UcCDQUrXWPYHxEW-ueXn8~mJLvKtNXsC0KBsv3o5uxMPCcq0EPa70ndZbTWcqGXueW5XvTfhmpPvEpbe8NocRPrWf7ZXF2St--bfpWnXwYBmSA15ItLAtaQN-HnaxmefxOxA3a5MLwIePHuBr0zdbVpyXVv6vsTRmkLytsXDSl8eQm5585E684eu9k8sxtqPrBEP2~uavsJeA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 9.5
+            rating: 9.5,
+            genre: ["HERO", "FANTASY", "ACTION"],
+            duration: "1h 47m"
         ),
         Card(
             title: "Shang-Chi",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/57c6/0ac6/4103ab5b1873bd5c48c06727c7edc165?Expires=1702252800&Signature=Kjv-Y1c8-v5UNUS9JDPP2QlTU-qVgGB-aCpFA~zaazWGkoOA62Uyv0avmi5NEwM-feMDnCDvUVbq897-2U9huU8jMFCAigALH-IWLhBX7NS0nggzcSO~Y6l-gw3zceDKG8wVGXMLK2K9Bld7TXZ2RHG-rtr~bp~B9tDuRuD-EKn2ZgQN6bGV4VAy~i3BAkGGv5t9mY6q9eyMMMQtvm79fKl0pEg~M1CmgOJomb-894QtlERFBxynMzme9epF15OWnDFz8Cl6hpgGAofBontSffBRHY0rFBmmIG05a1dl4Ei5hGON8QmGwDkAywT3BP7phbJfpyQG~ujJSUYQVMNiQg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/57c6/0ac6/4103ab5b1873bd5c48c06727c7edc165?Expires=1703462400&Signature=XuALkWYldzPHsdskxcMhQY~n3su2n8xzgqRnRTWFEq7pPVPhz9DEK7Yg1kgX~eOkhYYA9I3LUG-iUbjpoHJ2aKFGrO0-zM1VtO~PQiVooPo68MMUnOzfgisx4Mhf1rHBi5Acn-Jn9yZqrgAJFn~FzEtH4zKJHy8BRV3xufY8fCb8vuNKUFNMMZZ98Iht~mcDh77y-quQKwKPeIV6OOYMr9QJRFIBh93eDCevSyjohOgQzzxXpHj~jApSUYLHIG8v33R~M8wngNRZHMWM9zo75KNzfJMKbTqpq86O2E2kpKZ9Uvzqhzi8DHwKLkfmfFJnKrwUXMyKNcUreWTuATD1fg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 8.1
+            rating: 8.1,
+            genre: ["HERO", "FANTASY", "ACTION"],
+            duration: "1h 47m"
         )
     ]
     
     // MARK: - popularMovies Mock Data
 
+    let data = DateFormatter()
+    
     private let popularMovies = [
         Card(
             title: "Venom Let There Be Carnage",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/ff89/93bd/e32b303e2de87909627e5980bf1ff020?Expires=1702252800&Signature=BPORwBI4gw1bkuTLHKntximvmKXijDlRY7rW-GlgQH6nBThRaiXkodSKQVuJAx7SJ0hb~p07lHvP1yi-cneYswHyUM7XFfC7lKBLAzTEDSUgHmmwmQFLB0zcGfeM19qiEiEMTJBj246THLgY10tsIZzGKIIczRNawqhCHkbwoJ9i4IuvMJsUV7vXl1HNc2PyrPM8tNBACzXda1-qQpFL05~R87ku~T-vGO2GmFh4S7QSTdcIfNapn~mQkzv7uq8XeyRiexCnefhYgNLmj3H62o17hRmhvIHfGRU2qFsCOWjsSpPjbJ39OA9WEKatcKPnjZUpGUrcL8uIQz93HWcF0Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/ff89/93bd/e32b303e2de87909627e5980bf1ff020?Expires=1703462400&Signature=inD2rICwhE2JUBYWgaQ9As7APH2QIzQ1sHgGGupOHMsISHRz9v2Cmg6cxsNP6YHqlCsWa4EF336PixW7c7d1BKeXR-sI6E~DeSk07hhELneuh7zJQbldwcpwGPsxbZagkBWKLtMpefIYk60AyRrRK9ehNiGxWmT5sTQdRLLFXAy3sz3DEAH3hdW6AFMaPtFCDZzJL-l0BeEL29UBwNlJV1SoGzFZJqlEXc212Upr58Do~3PJsxbKe-v9vlafnsMhjWW9ck86BO34Lrq1Lm75Vj0MXAvdzfN9PwQg3EHAp3hWdMBFz~iq3hjYjLYZoDsHBI2EUfkKyv4vICxl~Dqc4g__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 6.4
+            rating: 6.4,
+            genre: ["HORROR", "MYSTERY", "THRILLER"],
+            duration: "1h 47m"
         ),
         Card(
             title: "The King’s Man",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/f848/dcc4/567771b490a0a92a3d50be405c35d796?Expires=1702252800&Signature=DzTxyT1CA6GvVw-9s3rYvTVtcEJbfsp2LABq2jqU3BLxO52tIWgWor-Rc4t35EXPXwDssuiJW7iD-B-ZyRL0VfZf0ncZMuthxpHnjeZWLj1333O-dXUc1WGtU3gQwGsOs4tofFkv4v7lF7wGfbj7LPArMRHLUVMBzTKDz4WIro-FJXjZoxXIT07yKGfKplLV3O53xIURCxx4Qde9F3Om-0eC6kna~qQECL~uG9wSjtuAHdmCy4KKt3chIHqTwAOOEb0oPBGrKcLX4go-xPl4mMjRe11tKQNhjLe45LnE3XTyGTS0vi3u-0kCOwNeAubgcDVkUDt1dge5EFYyu3mtVQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/f848/dcc4/567771b490a0a92a3d50be405c35d796?Expires=1703462400&Signature=Dt6KkX5n5vwTiusLAqreTb~2asDrv3e~bKPkTpF4jDbv5CsC0esmJUW0tHOfDpe2t05p66hw2FKv94ZNEK-FCdO8mKJFBFpL8qba3nEc1UduHUlhpbzUaAqpkocxai6Z-Rgvw9gf67STJmEu~SoPcpcYR3u-aiLateZoad42WbimlfeLFRWcNSWoLkB54zQkHuHA8ZzLwJQv1dc7EBuRmSo7iZtCs7VC0eGMOpCu-YMe2M-7FeyytStTFCc1JXc9e9qQyUyk4shOaoyj57e~cPkg3uzEtaWyBXCB6ul1D6B5g~5zCzC95Y0HijpDBDXbGPERiJ~j7BTQ5p1lh8KanQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 8.4
+            rating: 8.4,
+            genre: ["ACTION", "FANTASY"],
+            duration: "1h 56m"
         ),
         Card(
             title: "Eternals",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/558c/7e30/1333a603c13c99258f8fae503839a571?Expires=1702252800&Signature=HWDjowTJUgX8lUDPgoYsCoFKliVhXkDvXqgQYsNRyID8-W6JsCCPnd9T96VcYYsnLnYj~DbIcsNmKM-Pe04t~tLD71sAkvPMqT9kFXLcreNhBwzAJfDONbVlLcC3Kg~s7S5tFgyMBV-ddvpnrEYAKHHkrml0zF64faW8HmGEzsNgzgLKZCsl~uvPEl8ihT-YNq5kM~iTIvz27KKYxpiW2GSwzfRplBlwGDtWGfm-oU5rsHtgUGVzGN-nnY77fRDvVMe4sPyKCdAkl0dZmzdpHCdE5yyOs8x1g1t~tFeWnNkg2VJwcTFcxaD2DA6IgKSdWAC2aeIwAPkYM7OaWK2BHw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/558c/7e30/1333a603c13c99258f8fae503839a571?Expires=1703462400&Signature=LZgHsrrm~wlMleiu0qgSBJEcA9jb3Fid3ukikWKqMGk4k0kOUUHaSfPSO3SHorU3xwNlt46l3KjLGKBNC8njSi4k92aZ296Wp7mYjuX9wpcaA2J14YM8R3R3FeUTjMRjaF~Q7RUa2UcCDQUrXWPYHxEW-ueXn8~mJLvKtNXsC0KBsv3o5uxMPCcq0EPa70ndZbTWcqGXueW5XvTfhmpPvEpbe8NocRPrWf7ZXF2St--bfpWnXwYBmSA15ItLAtaQN-HnaxmefxOxA3a5MLwIePHuBr0zdbVpyXVv6vsTRmkLytsXDSl8eQm5585E684eu9k8sxtqPrBEP2~uavsJeA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 9.5
+            rating: 9.5,
+            genre: ["HERO","ACTION", "FANTASY"],
+            duration: "1h 36m"
         ),
         Card(
             title: "Spiderman: No Way Home",
-            url: URL( string:"https://s3-alpha-sig.figma.com/img/ba1f/bf81/09fe7e6d95c0a08f44a32090b2ce4427?Expires=1702252800&Signature=OKOnDaegnTa8NDuTNosCeXTAJVfC5SBgULHVr6-emDUgtQOa~pONzhiAOPzqsXkd63Ka2jKKPQSMVJLTCnPsAsZ6mRgHVaPsGhlL01CuqJ803h7VylKbCAY1vQ21mbunmxn0HAfRWT0n3X2~hvsECx3QeJHRxZJvYXOZVWj5D7Tnh3juWbIQQn23SjUSdaK~vmnJ3lAdpGB4obJt4U5upUwQT~v2mKenQjrC8TYef-4PekS6a0GYW3e-uRw~4j4YV9onbEgXhfm9HGdUDQgW84FGnctGLUXbesNMRbtQeAqsADTVpBbst6bmBbScypUl0-lgesJ8MvZ-K2NOs~d~NA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+            url: URL( string:"https://s3-alpha-sig.figma.com/img/ba1f/bf81/09fe7e6d95c0a08f44a32090b2ce4427?Expires=1703462400&Signature=DaIgcuc8JkCBvi~iG6PP~~7OJaxrg7NywAB8fFkLXHhsDj8yO4nNCj4A-wiTC46V7U-UWuDVQ2ijbMHMQllQ5j7IXofmP4Z94utbwIFcpuWND6phBSHrnHpdUZKpMlrQPk5nXCeOkjDE0cf0oLPJs-OslsqPA78V-6tbR1QtnAfsV3uZ8ICBXqaoMtgrFY38MR0qc-aP5aVMTv32lrRrUyIILDNF6qvnzwHu7Lfhe1gkrXtzREa4T8N28oAHP-z8axf8LkBIKOgg0XMnIOL4fTVrZU68f7Iaeswkv-80zIDNHWm0xAfFGhFzUtVfLZIQVYeHFSsQC~O2gDhMHgJtVw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
                 )!,
-            rating: 9.1
+            rating: 9.1,
+            genre: ["ACTION", "ADVENTURE", "FANTASY"],
+            duration: "2h 28m"
         )
     ]
     
@@ -91,8 +107,8 @@ public class HomeView: UIView {
             switch self.sections[sectionIndex] {
             case .nowShowing:
                 let size = NSCollectionLayoutSize(
-                    widthDimension: .absolute(175),
-                    heightDimension: .absolute(320)
+                    widthDimension: .absolute(143),
+                    heightDimension: .absolute(265)
                 )
                 let item = NSCollectionLayoutItem(layoutSize: size)
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitems: [item])
@@ -103,7 +119,6 @@ public class HomeView: UIView {
                 let header = NSCollectionLayoutBoundarySupplementaryItem(
                     layoutSize: headerSize,
                     elementKind: UICollectionView.elementKindSectionHeader,
-                    
                     alignment: .topLeading
                 )
                 let section = NSCollectionLayoutSection(group: group)
@@ -122,7 +137,7 @@ public class HomeView: UIView {
             case .popular:
                 let size = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(1),
-                    heightDimension: .absolute(150))
+                    heightDimension: .absolute(120))
                 let item = NSCollectionLayoutItem(layoutSize: size)
                 let group = NSCollectionLayoutGroup.vertical(layoutSize: size, subitems: [item])
                 let headerSize = NSCollectionLayoutSize(
@@ -217,11 +232,12 @@ extension HomeView: UICollectionViewDataSource {
             cell.configure(
                 title: popularMovies[indexPath.item].title,
                 url: popularMovies[indexPath.item].url,
-                ratingValue: popularMovies[indexPath.item].rating
+                ratingValue: popularMovies[indexPath.item].rating,
+                genresCard: popularMovies[indexPath.item].genre,
+                durationValue: popularMovies[indexPath.item].duration
             )
             return cell
         }
-        
     }
     
     public func collectionView(

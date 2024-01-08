@@ -20,6 +20,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "Merriweather-Black", size: 16)!,
+            NSAttributedString.Key.foregroundColor: UIColor.MainTitleColor
+        ]
+        
         addView()
         buildViewConstraints()
     }
@@ -45,7 +50,7 @@ struct CollectionViewController_Previews: PreviewProvider {
     static var previews: some View {
         Container().edgesIgnoringSafeArea(.all)
     }
-
+    
     struct Container: UIViewControllerRepresentable {
         func makeUIViewController(context: Context) -> UIViewController {
             UINavigationController(

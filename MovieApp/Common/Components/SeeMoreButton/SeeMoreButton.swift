@@ -19,7 +19,7 @@ class SeeMoreButton: UIButton {
     }
     
     private func layout(){
-        titleLabel?.font = .systemFont(ofSize: 14)
+        titleLabel?.font = UIFont(name: "Mulish-Regular", size: 10)
         titleLabel?.textAlignment = .center
         layer.borderWidth = 1
         layer.borderColor = UIColor.SeeMoreButtonColor.cgColor
